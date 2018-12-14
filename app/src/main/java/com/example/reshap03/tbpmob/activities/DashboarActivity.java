@@ -33,6 +33,9 @@ public class DashboarActivity extends AppCompatActivity implements View.OnClickL
         ckamis.setOnClickListener(this);
         cjumat.setOnClickListener(this);
 
+        //hide action bar
+        getSupportActionBar().hide();
+
     }
 
     @Override
