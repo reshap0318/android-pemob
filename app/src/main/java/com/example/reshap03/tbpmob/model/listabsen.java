@@ -9,11 +9,12 @@ public class listabsen {
     public String menit;
     public String jadwal;
     public String keterangan;
+    public String linkfoto;
 
     public listabsen() {
     }
 
-    public listabsen(String bulan, String tanggal, String tahun, String nama, String menit, String jadwal, String keterangan) {
+    public listabsen(String bulan, String tanggal, String tahun, String nama, String menit, String jadwal, String keterangan, String linkfoto) {
         this.bulan = bulan;
         this.tanggal = tanggal;
         this.tahun = tahun;
@@ -21,10 +22,37 @@ public class listabsen {
         this.menit = menit;
         this.jadwal = jadwal;
         this.keterangan = keterangan;
+        this.linkfoto = linkfoto;
     }
 
     public String getBulan() {
-        return bulan;
+        String pesan = null;
+        if(bulan.equals("1")){
+            pesan = "Januari";
+        }else if(bulan.equals("2")){
+            pesan = "Februari";
+        }else if(bulan.equals("3")){
+            pesan = "Maret";
+        }else if(bulan.equals("4)")){
+            pesan = "April";
+        }else if(bulan.equals("5")){
+            pesan = "Mei";
+        }else if(bulan.equals("6")){
+            pesan = "Juni";
+        }else if(bulan.equals("7")){
+            bulan = "Juli";
+        }else if(bulan.equals("8")){
+            pesan = "Agustus";
+        }else if(bulan.equals("9")){
+            pesan = "September";
+        }else if(bulan.equals("10")){
+            pesan = "Oktober";
+        }else if(bulan.equals("11")){
+            pesan = "November";
+        }else if(bulan.equals("12")){
+            pesan = "Desember";
+        }
+        return pesan;
     }
 
     public void setBulan(String bulan) {
@@ -77,5 +105,13 @@ public class listabsen {
 
     public void setKeterangan(String keterangan) {
         this.keterangan = keterangan;
+    }
+
+    public String getLinkfoto() {
+        return linkfoto;
+    }
+
+    public void setLinkfoto(String linkfoto) {
+        this.linkfoto = linkfoto;
     }
 }

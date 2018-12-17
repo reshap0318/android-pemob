@@ -2,7 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.reshap03.tbpmob">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
+        android:name=".server.appController"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -17,6 +21,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".activities.AbsenActivity" />
+        <activity android:name=".activities.ListAbsenActivity" />
+        <activity android:name=".activities.DetailAbsenActivity"></activity>
     </application>
 
 </manifest>
