@@ -19,19 +19,13 @@ public class DashboarActivity extends AppCompatActivity implements View.OnClickL
 
         //definisikan
         cabsen = (CardView) findViewById(R.id.absen);
-        csenin = (CardView) findViewById(R.id.senin);
-        cselasa = (CardView) findViewById(R.id.selasa);
-        crabu = (CardView) findViewById(R.id.rabu);
-        ckamis = (CardView) findViewById(R.id.kamis);
-        cjumat = (CardView) findViewById(R.id.jumat);
+        csenin = (CardView) findViewById(R.id.listabsen);
+        cselasa = (CardView) findViewById(R.id.listfavorit);
 
         //add click
         cabsen.setOnClickListener(this);
         csenin.setOnClickListener(this);
         cselasa.setOnClickListener(this);
-        crabu.setOnClickListener(this);
-        ckamis.setOnClickListener(this);
-        cjumat.setOnClickListener(this);
 
         //hide action bar
         getSupportActionBar().hide();
@@ -45,7 +39,7 @@ public class DashboarActivity extends AppCompatActivity implements View.OnClickL
         switch (v.getId()){
             case R.id.absen : intent = new Intent(DashboarActivity.this, AbsenActivity.class);startActivity(intent);break;
             case R.id.senin : intent = new Intent(DashboarActivity.this, ListAbsenActivity.class);startActivity(intent);break;
-            case R.id.selasa : intent = new Intent(DashboarActivity.this, DetailAbsenActivity.class);startActivity(intent);break;
+            case R.id.selasa : intent = new Intent(DashboarActivity.this, favoritActivity.class);startActivity(intent);break;
         }
     }
 

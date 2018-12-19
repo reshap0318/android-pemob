@@ -48,65 +48,71 @@
             android:background="#fcfcfc"
             android:gravity="center"
             android:id="@+id/ll">
+
             <LinearLayout
                 android:clipToPadding="false"
                 android:gravity="center"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-
                 <android.support.v7.widget.CardView
                     android:id="@+id/absen"
-                    android:layout_width="160dp"
-                    android:layout_height="180dp"
-                    android:layout_margin="10dp"
+                    android:foreground="?android:attr/selectableItemBackground"
                     android:clickable="true"
-                    android:foreground="?android:attr/selectableItemBackground">
-
+                    android:layout_width="340dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="10dp">
                     <LinearLayout
+
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
+                        android:orientation="vertical"
+                        android:gravity="center">
                         <ImageView
                             android:layout_width="64dp"
                             android:layout_height="64dp"
                             android:background="@drawable/cercleshapepink"
-                            android:padding="10dp"
-                            android:src="@drawable/date" />
-
+                            android:src="@drawable/date"
+                            android:padding="10dp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textStyle="bold"
                             android:layout_marginTop="10dp"
-                            android:text="Absen"
-                            android:textStyle="bold" />
-
+                            android:text="Absen"/>
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:layout_margin="10dp"
-                            android:background="@color/lightgray" />
-
+                            android:background="@color/lightgray"
+                            android:layout_margin="10dp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:padding="5dp"
                             android:text="Check your bank activities"
-                            android:textColor="@android:color/darker_gray" />
+                            android:padding="5dp"
+                            android:textColor="@android:color/darker_gray"/>
 
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:clipToPadding="false"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
                 <android.support.v7.widget.CardView
-                    android:id="@+id/senin"
+                    android:id="@+id/listabsen"
                     android:foreground="?android:attr/selectableItemBackground"
                     android:clickable="true"
-                    android:layout_width="160dp"
-                    android:layout_height="180dp"
+                    android:layout_width="340dp"
+                    android:layout_height="150dp"
                     android:layout_margin="10dp">
                     <LinearLayout
+
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
@@ -122,7 +128,7 @@
                             android:layout_height="wrap_content"
                             android:textStyle="bold"
                             android:layout_marginTop="10dp"
-                            android:text="Detail Piket Senin"/>
+                            android:text="List Absen"/>
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
@@ -139,6 +145,7 @@
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
             </LinearLayout>
+
             <LinearLayout
                 android:clipToPadding="false"
                 android:gravity="center"
@@ -146,111 +153,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <android.support.v7.widget.CardView
-                    android:id="@+id/selasa"
+                    android:id="@+id/listfavorit"
                     android:foreground="?android:attr/selectableItemBackground"
                     android:clickable="true"
-                    android:layout_width="160dp"
-                    android:layout_height="180dp"
+                    android:layout_width="340dp"
+                    android:layout_height="150dp"
                     android:layout_margin="10dp">
                     <LinearLayout
+
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         android:gravity="center">
-                        <ImageView
-                            android:layout_width="64dp"
-                            android:layout_height="64dp"
-                            android:background="@drawable/cercleshapecoklat"
-                            android:src="@drawable/bookmark"
-                            android:padding="10dp"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textStyle="bold"
-                            android:layout_marginTop="10dp"
-                            android:text="Detail Piket Selasa"/>
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="@color/lightgray"
-                            android:layout_margin="10dp"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="Check your bank activities"
-                            android:padding="5dp"
-                            android:textColor="@android:color/darker_gray"/>
-
-                    </LinearLayout>
-                </android.support.v7.widget.CardView>
-                <android.support.v7.widget.CardView
-                    android:id="@+id/rabu"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:clickable="true"
-                    android:layout_width="160dp"
-                    android:layout_height="180dp"
-                    android:layout_margin="10dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
                         <ImageView
                             android:layout_width="64dp"
                             android:layout_height="64dp"
                             android:background="@drawable/cercleshapeamoled"
-                            android:padding="10dp"
-                            android:src="@drawable/bookmark" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:text="Detail Piket Rabu"
-                            android:textStyle="bold" />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:layout_margin="10dp"
-                            android:background="@color/lightgray" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:padding="5dp"
-                            android:text="Check your bank activities"
-                            android:textColor="@android:color/darker_gray" />
-
-                    </LinearLayout>
-                </android.support.v7.widget.CardView>
-            </LinearLayout>
-            <LinearLayout
-                android:clipToPadding="false"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <android.support.v7.widget.CardView
-                    android:id="@+id/kamis"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:clickable="true"
-                    android:layout_width="160dp"
-                    android:layout_height="180dp"
-                    android:layout_margin="10dp">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:gravity="center">
-                        <ImageView
-                            android:layout_width="64dp"
-                            android:layout_height="64dp"
-                            android:background="@drawable/cercleshapeyellow"
                             android:src="@drawable/bookmark"
                             android:padding="10dp"/>
                         <TextView
@@ -258,7 +176,7 @@
                             android:layout_height="wrap_content"
                             android:textStyle="bold"
                             android:layout_marginTop="10dp"
-                            android:text="Detail Piket Kamis"/>
+                            android:text="List Absen Favorite"/>
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
@@ -271,50 +189,6 @@
                             android:text="Check your bank activities"
                             android:padding="5dp"
                             android:textColor="@android:color/darker_gray"/>
-
-                    </LinearLayout>
-                </android.support.v7.widget.CardView>
-                <android.support.v7.widget.CardView
-                    android:id="@+id/jumat"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:clickable="true"
-                    android:layout_width="160dp"
-                    android:layout_height="180dp"
-                    android:layout_margin="10dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="64dp"
-                            android:layout_height="64dp"
-                            android:background="@drawable/cercleshapeblue"
-                            android:padding="10dp"
-                            android:src="@drawable/bookmark" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:text="Detail Piket Jum'at"
-                            android:textStyle="bold" />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:layout_margin="10dp"
-                            android:background="@color/lightgray" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:padding="5dp"
-                            android:text="Check your bank activities"
-                            android:textColor="@android:color/darker_gray" />
 
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
