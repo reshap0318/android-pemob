@@ -38,8 +38,8 @@ public class DashboarActivity extends AppCompatActivity implements View.OnClickL
 
         switch (v.getId()){
             case R.id.absen : intent = new Intent(DashboarActivity.this, AbsenActivity.class);startActivity(intent);break;
-            case R.id.senin : intent = new Intent(DashboarActivity.this, ListAbsenActivity.class);startActivity(intent);break;
-            case R.id.selasa : intent = new Intent(DashboarActivity.this, favoritActivity.class);startActivity(intent);break;
+            case R.id.listabsen : intent = new Intent(DashboarActivity.this, ListAbsenActivity.class);startActivity(intent);break;
+            case R.id.listfavorit : intent = new Intent(DashboarActivity.this, ListActivity.class);startActivity(intent);break;
         }
     }
 

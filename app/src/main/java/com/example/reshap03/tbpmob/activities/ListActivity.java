@@ -24,24 +24,23 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class favoritActivity extends AppCompatActivity {
+public class ListActivity extends AppCompatActivity {
 
     private final String JSON_URL = "http://10.44.7.52/pemob/public/api/faf/1";
     private JsonArrayRequest ArrayRequest ;
     private RequestQueue requestQueue ;
     private List<listabsen> daftarabsen= new ArrayList<>();
     private RecyclerView myrv ;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_favorit);
+        setContentView(R.layout.activity_list);
         myrv = findViewById(R.id.rvlist);
         if(cekjaringan()){
-            Toast.makeText(favoritActivity.this, "Jaringan Ada", Toast.LENGTH_SHORT).show();
+            Toast.makeText(ListActivity.this, "Jaringan Ada", Toast.LENGTH_SHORT).show();
             jsoncall();
         }else if(!cekjaringan()){
-            Toast.makeText(favoritActivity.this, "Jaringan Tidak Ada", Toast.LENGTH_SHORT).show();
+            Toast.makeText(ListActivity.this, "Jaringan Tidak Ada", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -127,4 +126,6 @@ public class favoritActivity extends AppCompatActivity {
         myrv.setAdapter(myadapter);
 
     }
+
+
 }

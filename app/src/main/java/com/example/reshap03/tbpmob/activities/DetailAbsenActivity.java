@@ -36,7 +36,7 @@ public class DetailAbsenActivity extends AppCompatActivity {
 
     TextView dnama, djadwal, dwaktu, dketerangan, did;
     ImageView imgfav;
-    int fave,id;
+    public static int fave,id;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -125,13 +125,13 @@ public class DetailAbsenActivity extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(AbsenActivity.this,"Gagal", Toast.LENGTH_SHORT);
+                Toast.makeText(DetailAbsenActivity.this,"Gagal", Toast.LENGTH_SHORT);
             }
         }){
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> map = new HashMap<>();
-                map.put("favo", fave);
+                map.put("favo", String.valueOf(fave));
                 return map;
             }
         };

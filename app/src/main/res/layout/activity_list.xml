@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.favoritActivity">
+    tools:context=".activities.ListActivity">
 
     <android.support.v7.widget.RecyclerView
         android:layout_marginRight="20dp"
@@ -15,5 +15,4 @@
         android:layout_height="match_parent">
 
     </android.support.v7.widget.RecyclerView>
-
 </android.support.constraint.ConstraintLayout>
