@@ -40,6 +40,7 @@ public class listadapter extends RecyclerView.Adapter<listadapter.MyviewHolder> 
                 Intent i = new Intent(mContext, DetailAbsenActivity.class);
                 //nama, menit di ambil dari id di row, dan get nama datang dari model
                 i.putExtra("nama", mdata.get(viewholder.getAdapterPosition()).getNama());
+                i.putExtra("id", mdata.get(viewholder.getAdapterPosition()).getId());
                 i.putExtra("menit", mdata.get(viewholder.getAdapterPosition()).getMenit());
                 i.putExtra("jadwal", mdata.get(viewholder.getAdapterPosition()).getJadwal());
                 i.putExtra("tanggal", mdata.get(viewholder.getAdapterPosition()).getTanggal());
@@ -47,6 +48,7 @@ public class listadapter extends RecyclerView.Adapter<listadapter.MyviewHolder> 
                 i.putExtra("tahun", mdata.get(viewholder.getAdapterPosition()).getTahun());
                 i.putExtra("keterangan", mdata.get(viewholder.getAdapterPosition()).getKeterangan());
                 i.putExtra("img_url", mdata.get(viewholder.getAdapterPosition()).getLinkfoto());
+                i.putExtra("favo", mdata.get(viewholder.getAdapterPosition()).getFav());
 
                 mContext.startActivity(i);
 

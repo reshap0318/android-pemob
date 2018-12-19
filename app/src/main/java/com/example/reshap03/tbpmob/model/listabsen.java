@@ -2,6 +2,7 @@ package com.example.reshap03.tbpmob.model;
 
 public class listabsen {
 
+    int id;
     public String bulan;
     public String tanggal;
     public String tahun;
@@ -10,11 +11,13 @@ public class listabsen {
     public String jadwal;
     public String keterangan;
     public String linkfoto;
+    public int fav;
 
     public listabsen() {
     }
 
-    public listabsen(String bulan, String tanggal, String tahun, String nama, String menit, String jadwal, String keterangan, String linkfoto) {
+    public listabsen(int id, String bulan, String tanggal, String tahun, String nama, String menit, String jadwal, String keterangan, String linkfoto, int fav) {
+        this.id = id;
         this.bulan = bulan;
         this.tanggal = tanggal;
         this.tahun = tahun;
@@ -23,7 +26,9 @@ public class listabsen {
         this.jadwal = jadwal;
         this.keterangan = keterangan;
         this.linkfoto = linkfoto;
+        this.fav = fav;
     }
+
 
     public String getBulan() {
         String pesan = null;
@@ -113,5 +118,21 @@ public class listabsen {
 
     public void setLinkfoto(String linkfoto) {
         this.linkfoto = linkfoto;
+    }
+
+    public int getFav() {
+        return fav;
+    }
+
+    public void setFav(int fav) {
+        this.fav = fav;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

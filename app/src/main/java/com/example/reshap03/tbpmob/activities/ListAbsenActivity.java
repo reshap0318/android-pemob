@@ -28,7 +28,7 @@ import java.util.List;
 
 public class ListAbsenActivity extends AppCompatActivity {
 
-    private final String JSON_URL = "https://murmuring-lowlands-33642.herokuapp.com/api/absen";
+    private final String JSON_URL = "http://10.44.7.52/pemob/public/api/absen";
     private JsonArrayRequest ArrayRequest ;
     private RequestQueue requestQueue ;
     private List<listabsen> daftarabsen= new ArrayList<>();
@@ -91,14 +91,16 @@ public class ListAbsenActivity extends AppCompatActivity {
                         jsonObject = response.getJSONObject(i);
                         listabsen lsabsen = new listabsen();
                         //nama di ujung di ambil dari hasil query
+                        lsabsen.setId(jsonObject.getInt("id"));
                         lsabsen.setNama(jsonObject.getString("nama"));
                         lsabsen.setJadwal(jsonObject.getString("jadwal"));
                         lsabsen.setMenit(jsonObject.getString("times"));
                         lsabsen.setTanggal(jsonObject.getString("tanggal"));
                         lsabsen.setBulan(jsonObject.getString("bulan"));
                         lsabsen.setTahun(jsonObject.getString("tahun"));
+                        lsabsen.setFav(jsonObject.getInt("favo"));
                         lsabsen.setKeterangan(jsonObject.getString("keterangan"));
-                        lsabsen.setLinkfoto(jsonObject.getString("foto"));
+                        lsabsen.setLinkfoto("http://localhost/pemob/public/foto/"+jsonObject.getString("foto"));
                         daftarabsen.add(lsabsen);
                     }catch (JSONException e){
 
